@@ -7,6 +7,7 @@ background: #FFFFFF99; */
     --color-accent: #2196F3;
     --color-text: #757575;
     --color-light: #FFFFFF;
+    --color-back-hero: #C4C4C4;
     --color-back-secondary: #2F303A;
     --color-back-btn: #F5F4FA;
     --color-logo: #000000;
@@ -15,6 +16,8 @@ background: #FFFFFF99; */
     --color-border: #ECECEC;
     --color-shadow-card: rgba(0, 0, 0, 0.15);
     --color-border-card: #EEEEEE;
+    --color-social-icon: #AFB1B8;
+    --color-back-social-icon: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -133,7 +136,15 @@ img {
 
 
 .tel-mail {
+    display: flex;
+    align-items: center;
     color: var(--color-text);
+}
+
+.header-icon {
+    margin-right: 10px;
+
+    fill: currentColor;
 }
 
 /* Студія hero */
@@ -143,7 +154,10 @@ img {
     padding-bottom: 200px;
     text-align: center;
 
-    background-color: var(--color-back-secondary);
+    background-color: var(--color-back-hero);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url("../images/img-hero.jpg");
+    background-size: cover;
 }
 
 .hero-title {
@@ -203,6 +217,17 @@ background: var(--color-active-btn);
     margin-right: 30px;
 }
 
+.our-adv-cont-icon {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    background-color: var(--color-back-btn);
+}
+
 .benefits-subtitle {
     margin-bottom: 10px;
 
@@ -211,7 +236,7 @@ background: var(--color-active-btn);
     line-height: 1.14;
     text-transform: uppercase;
 
-color: var(--color-title);
+    color: var(--color-title);
 }
 
 .benefits-text {
@@ -250,7 +275,7 @@ color: var(--color-title);
     gap: 30px;
 }
 
-.list-our-pro .item {
+.list-our-pro > .item {
     width: 270px;
     
     background-color: var(--color-light);
@@ -274,7 +299,7 @@ color: var(--color-title);
 }
 
 .our-pro-text {
-    padding-bottom: 30px;
+    margin-bottom: 16px;
 
     text-align: center;
     font-weight: 400;
@@ -284,13 +309,90 @@ color: var(--color-title);
     color: var(--color-text);
 }
 
+.social-list {
+    display:flex;
+    column-gap: 10px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: var(--color-light);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--color-accent);
+}
+
+.social-icon {
+
+    fill: var(--color-social-icon);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: var(--color-light);
+}
+
+/* Студія Постійні клієнти */
+
+.list-our-clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.link-our-clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--color-social-icon);
+    border-radius: 4px;
+}
+
+
+.link-our-clients:hover,
+.link-our-clients:focus {
+    border: 1px solid var(--color-accent);
+}
+
+.link-our-clients:hover .icon-our-clients,
+.link-our-clients:focus .icon-our-clients{
+    fill: var(--color-accent);
+}
+
+.icon-our-clients {
+    fill: var(--color-social-icon);
+}
+
+
 /* Студія footer */
 
 .footer {
+    display: flex;
+    align-items: baseline;
     padding-top: 60px;
+    padding-right: 878px;
     padding-bottom: 60px;
+    padding-left: 215px;
 
     background-color: var(--color-back-secondary);
+}
+
+.container-contacts-footer {
+    margin-right: 70px;
 }
 
 .footer-contacts {
@@ -323,6 +425,46 @@ color: var(--color-title);
     line-height: 1.71;
 
     color: var(--color-footer-link);
+}
+
+.container-social-list-footer {
+    width: 206px;
+    height: 80px;
+}
+
+.footer-subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1,14;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    color: var(--color-light);
+}
+
+.list-footer-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: var(--color-back-social-icon);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--color-accent);
+}
+
+.footer-icon {
+    fill: var(--color-light);
 }
 
 /* Портфоліо Приклади робіт */
@@ -385,6 +527,13 @@ color: var(--color-title);
 
 }
 
+.list-portf-examples > .item:hover,
+.list-portf-examples > .item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06),
+     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .card-text {
     padding: 20px 24px;
     border: 1px solid var(--color-border-card);
@@ -408,4 +557,3 @@ color: var(--color-title);
     line-height: 1.88;
     color: var(--color-text);
 }
-
