@@ -366,7 +366,7 @@ color: var(--color-title);
 
 .link-our-clients:hover,
 .link-our-clients:focus {
-    border: 1px solid var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .link-our-clients:hover .icon-our-clients,
@@ -382,18 +382,19 @@ color: var(--color-title);
 /* Студія footer */
 
 .footer {
+    background-color: var(--color-back-secondary);
+}
+
+.container-footer {
     display: flex;
     align-items: baseline;
     padding-top: 60px;
-    padding-right: 878px;
     padding-bottom: 60px;
-    padding-left: 215px;
-
-    background-color: var(--color-back-secondary);
 }
 
 .container-contacts-footer {
     margin-right: 70px;
+    padding-left: 215px;
 }
 
 .footer-contacts {
@@ -426,11 +427,6 @@ color: var(--color-title);
     line-height: 1.71;
 
     color: var(--color-footer-link);
-}
-
-.container-social-list-footer {
-    width: 206px;
-    height: 80px;
 }
 
 .footer-subtitle {
@@ -528,8 +524,12 @@ color: var(--color-title);
 
 }
 
-.list-portf-examples > .item:hover,
-.list-portf-examples > .item:focus {
+.portf-link {
+    display: block;
+}
+
+.portf-link:hover,
+.portf-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
      0px 4px 4px rgba(0, 0, 0, 0.06),
      1px 4px 6px rgba(0, 0, 0, 0.16);
