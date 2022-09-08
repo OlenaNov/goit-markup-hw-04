@@ -383,13 +383,14 @@ color: var(--color-title);
 
 .footer {
     background-color: var(--color-back-secondary);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .container-footer {
     display: flex;
     align-items: baseline;
-    padding-top: 60px;
-    padding-bottom: 60px;
+
 }
 
 .container-contacts-footer {
